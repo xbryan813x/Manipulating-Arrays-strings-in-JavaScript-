@@ -1,0 +1,171 @@
+// This function returns true if the input number is odd, else false.
+
+function isOdd(number){
+  return (number % 2 !== 0);
+}
+console.log(isOdd(2));
+console.log(isOdd(5));
+console.log(isOdd(-17));
+
+// This function takes in an input number and adds 5.
+
+function plusFive(number){
+  return (number + 5)
+}
+
+console.log(plusFive(4));
+console.log(plusFive(5));
+
+// This function returns true if the number is divisible by 5 or 7.
+
+function threeOrSeven(number){
+  for (var i = 0; i < number; i++){
+    if (number % 3 === 0 || number % 7 === 0){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
+
+console.log(threeOrSeven(7));
+console.log(threeOrSeven(3));
+console.log(threeOrSeven(8));
+console.log(threeOrSeven(3));
+
+// This function will print Hello to the input value
+
+function hello(word){
+  return ("hello, " + word + ".")
+}
+
+console.log(hello("Bryan"));
+console.log(hello("Kevin"));
+
+// This function returns the input string in ALL CAPS and three !!!
+
+function yell(string){
+  return (string.toUpperCase() + " !!!")
+}
+
+console.log(yell("hello, my name is bryan"));
+
+// This function makes everything lower case.
+
+function whisper(string){
+  return ("..." + string.toLowerCase() + "...")
+}
+console.log(whisper("HELLO, MY NAME IS BRYAN"));
+
+// This function returns a boolean if the substring is part of the string.
+
+function isSubstring(string, substring){
+  return (string.indexOf(substring) !== -1)
+
+}
+
+console.log(isSubstring("hello bobby", "cARL"));
+
+
+function echo(string){
+  return (string.toUpperCase() + "!" + " ..." +
+  string[0].toUpperCase() + string.slice(1,string.length) +
+  "!" + " ..." + string.toLowerCase() + "!");
+}
+console.log(echo("hello"));
+console.log(echo("Bryan"));
+console.log(echo("aaa"));
+
+// This function return true or false depending on whether or not the input
+// value is even.
+
+function isEven(num){
+  return (num % 2 === 0);
+}
+
+console.log(isEven(7));
+console.log(isEven(8));
+console.log(isEven(9));
+console.log(isEven(10));
+
+// This function prints all the numbers between lowNum and highNum.
+
+function logBetween(lowNum, highNum){
+  for (var i = lowNum; i <= highNum; i++){
+    console.log(i);
+  }
+}
+
+console.log(logBetween(3,9));
+console.log(logBetween(14,32));
+
+// This function returns any number thats divisible by three or five but not both.
+
+function fizzBuzz(number){
+  for (var i = 0; i < number; i++){
+    if (i % 3 === 0 && i % 5 !== 0){
+      console.log(i);
+    }else if (i % 5 === 0 && i % 3 !== 0){
+      console.log(i);
+    }
+  }
+}
+
+console.log(fizzBuzz(40));
+
+// The following function returns true if "factor" is a factor of "number".
+
+function isFactorOf(number, factor){
+  return (number % factor === 0);
+}
+console.log(isFactorOf(6,2));
+console.log(isFactorOf(-6,2));
+console.log(isFactorOf(5,0));
+
+// This function returns true if the number is Prime.
+
+function isPrime(number){
+  var result = null;
+
+  if (number === 2){
+    return true;
+  }
+  for (var i = 2; i < number; i++){
+   if (number % i === 0){
+      return false;
+    }else if (number % i !== 0){
+       result = true;
+    }
+  }
+  return result;
+}
+
+console.log(isPrime(9));
+
+// This function prints every element of an array and its index to the console.
+
+function logEach(array){
+  for (var i = 0; i < array.length; i++){
+    console.log(i + ":" + " " + array[i])
+  }
+}
+
+logEach(["Tom","Matt","carl","Jake"]);
+
+// This function returns the largest value in an array of numbers.
+
+function maxValue(array){
+  var largest = null;
+  for (var i = 0; i < array.length; i++){
+    var firstEl = array[i]
+    var secondEl = array[i + 1]
+      if (firstEl < secondEl){
+      largest = secondEl;
+    }
+  }
+  return largest;
+}
+
+console.log(maxValue([12,6,43,2]));
+console.log(maxValue([]));
+console.log(maxValue([-4,-10,0.43]));
